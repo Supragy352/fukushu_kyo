@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://c474nh7fnx5mr"]
+
+[ext_resource type="SpriteFrames" uid="uid://bw2agxl1scbi3" path="res://assest/sprites/pixel_special_effects_animation.tres" id="1_apepg"]
+
+[node name="EnergyBallExplosion" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_apepg")
+animation = &"After_effect"
+autoplay = "After_effect"
+frame_progress = 0.517601
