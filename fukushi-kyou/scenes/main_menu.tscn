@@ -1,0 +1,114 @@
+[gd_scene load_steps=5 format=3 uid="uid://dp0kv5em8y8nr"]
+
+[ext_resource type="Texture2D" uid="uid://cipho48udv1xh" path="res://assest/sprites/Background (2).png" id="1_anxea"]
+[ext_resource type="FontFile" uid="uid://cojhf7pxiu1dx" path="res://assest/fonts/Kashima Demo.otf" id="2_4lrf8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p8pu2"]
+texture = ExtResource("1_anxea")
+modulate_color = Color(0.873298, 0.873298, 0.873298, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_44bby"]
+modulate_color = Color(0.925353, 0.925353, 0.925353, 1)
+
+[node name="Main_Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -8.0
+offset_right = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_p8pu2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.39
+anchor_top = 0.306
+anchor_right = 0.569
+anchor_bottom = 0.582
+offset_left = -0.280029
+offset_top = 48.712
+offset_right = 40.512
+offset_bottom = 107.864
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="Start" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_4lrf8")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_44bby")
+text = "Start"
+
+[node name="Options" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_4lrf8")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_44bby")
+text = "Options"
+
+[node name="Exit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_4lrf8")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_44bby")
+text = "Exit"
+
+[node name="Game_name" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -287.0
+offset_top = -174.5
+offset_right = 318.0
+offset_bottom = -48.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_4lrf8")
+theme_override_font_sizes/font_size = 84
+text = "Fukushi Kyou"
+horizontal_alignment = 1
+
+[node name="japanese_Name" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -273.5
+offset_top = -112.5
+offset_right = 273.5
+offset_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.898039, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_4lrf8")
+theme_override_font_sizes/font_size = 48
+text = "(福士杏)"
+horizontal_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

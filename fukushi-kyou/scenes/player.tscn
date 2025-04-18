@@ -1,0 +1,56 @@
+[gd_scene load_steps=9 format=3 uid="uid://b25fq4dp0swg1"]
+
+[ext_resource type="Texture2D" uid="uid://dsokot8idudhy" path="res://assest/Legacy-Fantasy - High Forest 2.3/Character/Idle/Idle-Sheet.png" id="1_aa1x5"]
+[ext_resource type="Script" path="res://script/player.gd" id="1_j7pgl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bv1ic"]
+atlas = ExtResource("1_aa1x5")
+region = Rect2(0, 0, 64, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lyld3"]
+atlas = ExtResource("1_aa1x5")
+region = Rect2(64, 0, 64, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5d7ed"]
+atlas = ExtResource("1_aa1x5")
+region = Rect2(128, 0, 64, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tvyqx"]
+atlas = ExtResource("1_aa1x5")
+region = Rect2(192, 0, 64, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cw2h7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bv1ic")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lyld3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5d7ed")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tvyqx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_frnck"]
+radius = 7.0
+height = 46.0
+
+[node name="player" type="CharacterBody2D"]
+script = ExtResource("1_j7pgl")
+speed = 200.0
+jump_velocity = -200.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_cw2h7")
+frame_progress = 0.270827
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_frnck")
