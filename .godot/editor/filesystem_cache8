@@ -1,0 +1,24 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1739941911
+icon.svg::CompressedTexture2D::2751286492860585563::1739268758::1739268763::1::::<><>::
+README.md::TextFile::-1::1739269090::0::1::::<><>::
+::res://addons/::1739268911
+::res://addons/godot-git-plugin/::1739268911
+git_plugin.gdextension::GDExtension::-1::1739268911::0::1::::<><>::
+plugin.cfg::TextFile::-1::1739268911::0::1::::<><>::
+THIRDPARTY.md::TextFile::-1::1739268911::0::1::::<><>::
+::res://addons/godot-git-plugin/linux/::1739268911
+::res://addons/godot-git-plugin/macos/::1739268911
+::res://addons/godot-git-plugin/win64/::1739941907
+::res://assets/::1739871530
+::res://assets/buddha/::1739877773
+buddh.png::CompressedTexture2D::940991549620346839::1739279856::1739871530::1::::<><>::
+IDLE-Sheet.png::CompressedTexture2D::5891797301201604427::1739871534::1739871534::1::::<><>::
+RUN-Sheet.png::CompressedTexture2D::755421569391516949::1739877772::1739877773::1::::<><>::
+::res://research/::1739871351
+WhatsApp Image 2025-02-11 at 15.39.12_db1f86db.jpg::CompressedTexture2D::6427855466393016098::1739269774::1739871351::1::::<><>::
+::res://scenes/::1739913652
+main.tscn::PackedScene::3425381902479217871::1739913652::0::1::::<><>::uid://bi6gghlxyf2t4::::res://scenes/player.tscn
+player.tscn::PackedScene::3012302545626856151::1739912375::0::1::::<><>::uid://cp7bbndtujl44::::res://assets/buddha/IDLE-Sheet.png<>res://scripts/player.gd<>uid://k06xhn5lltq8::::res://assets/buddha/RUN-Sheet.png
+::res://scripts/::1739877978
+player.gd::GDScript::-1::1739878274::0::1::::<>CharacterBody2D<>::
