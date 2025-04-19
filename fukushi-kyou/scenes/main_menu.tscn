@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dp0kv5em8y8nr"]
 
-[ext_resource type="Texture2D" uid="uid://cipho48udv1xh" path="res://assest/sprites/Background (2).png" id="1_anxea"]
+[ext_resource type="Texture2D" uid="uid://cipho48udv1xh" path="res://assest/sprites/main_menu_bg.png" id="1_anxea"]
 [ext_resource type="FontFile" uid="uid://cojhf7pxiu1dx" path="res://assest/fonts/Kashima Demo.otf" id="2_4lrf8"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p8pu2"]

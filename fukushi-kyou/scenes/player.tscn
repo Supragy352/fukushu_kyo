@@ -1,56 +1,98 @@
-[gd_scene load_steps=9 format=3 uid="uid://b25fq4dp0swg1"]
+[gd_scene load_steps=16 format=3 uid="uid://b25fq4dp0swg1"]
 
-[ext_resource type="Texture2D" uid="uid://dsokot8idudhy" path="res://assest/Legacy-Fantasy - High Forest 2.3/Character/Idle/Idle-Sheet.png" id="1_aa1x5"]
-[ext_resource type="Script" path="res://script/player.gd" id="1_j7pgl"]
+[ext_resource type="Script" uid="uid://belxdgkvnxknw" path="res://script/player.gd" id="1_j7pgl"]
+[ext_resource type="Shader" uid="uid://b8watlovm8i6p" path="res://script/shaders/blink.gdshader" id="2_dqkch"]
+[ext_resource type="Texture2D" uid="uid://dagwa0hrlvon0" path="res://assest/sprites/player/idle.png" id="3_qlg0r"]
+[ext_resource type="Texture2D" uid="uid://bvrnrdgj3ead4" path="res://assest/sprites/player/Jump-Sheet.png" id="4_tuyoq"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bv1ic"]
-atlas = ExtResource("1_aa1x5")
-region = Rect2(0, 0, 64, 80)
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fjrip"]
+shader = ExtResource("2_dqkch")
+shader_parameter/blink_color = Color(0, 0, 0, 1)
+shader_parameter/blink_intensity = 0.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lyld3"]
-atlas = ExtResource("1_aa1x5")
-region = Rect2(64, 0, 64, 80)
+[sub_resource type="AtlasTexture" id="AtlasTexture_smehm"]
+atlas = ExtResource("3_qlg0r")
+region = Rect2(0, 0, 256, 256)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5d7ed"]
-atlas = ExtResource("1_aa1x5")
-region = Rect2(128, 0, 64, 80)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ur7pv"]
+atlas = ExtResource("3_qlg0r")
+region = Rect2(256, 0, 256, 256)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tvyqx"]
-atlas = ExtResource("1_aa1x5")
-region = Rect2(192, 0, 64, 80)
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4r1p"]
+atlas = ExtResource("3_qlg0r")
+region = Rect2(512, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2wvv"]
+atlas = ExtResource("3_qlg0r")
+region = Rect2(768, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3v2ag"]
+atlas = ExtResource("4_tuyoq")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jej6c"]
+atlas = ExtResource("4_tuyoq")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1ej7"]
+atlas = ExtResource("4_tuyoq")
+region = Rect2(512, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oprun"]
+atlas = ExtResource("4_tuyoq")
+region = Rect2(768, 0, 256, 256)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cw2h7"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bv1ic")
+"texture": SubResource("AtlasTexture_smehm")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lyld3")
+"texture": SubResource("AtlasTexture_ur7pv")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5d7ed")
+"texture": SubResource("AtlasTexture_y4r1p")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_tvyqx")
+"texture": SubResource("AtlasTexture_d2wvv")
 }],
 "loop": true,
-"name": &"default",
-"speed": 10.0
+"name": &"idle",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3v2ag")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jej6c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f1ej7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oprun")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 7.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_frnck"]
-radius = 7.0
-height = 46.0
+radius = 37.0
+height = 196.0
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_j7pgl")
-speed = 200.0
-jump_velocity = -200.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_fjrip")
+position = Vector2(2, -113)
 sprite_frames = SubResource("SpriteFrames_cw2h7")
-frame_progress = 0.270827
+animation = &"idle"
+autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, -97)
 shape = SubResource("CapsuleShape2D_frnck")
