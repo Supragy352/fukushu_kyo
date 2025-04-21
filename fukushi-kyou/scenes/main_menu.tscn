@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dp0kv5em8y8nr"]
 
-[ext_resource type="Texture2D" uid="uid://cipho48udv1xh" path="res://assest/sprites/main_menu_bg.png" id="1_anxea"]
-[ext_resource type="FontFile" uid="uid://cojhf7pxiu1dx" path="res://assest/fonts/Kashima Demo.otf" id="2_4lrf8"]
+[ext_resource type="Texture2D" uid="uid://cipho48udv1xh" path="res://assets/sprites/main_menu_bg.png" id="1_anxea"]
+[ext_resource type="FontFile" uid="uid://cojhf7pxiu1dx" path="res://assets/fonts/Kashima Demo.otf" id="2_4lrf8"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p8pu2"]
 texture = ExtResource("1_anxea")
@@ -24,8 +24,9 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -4.0
-offset_top = -8.0
+offset_top = -4.0
 offset_right = 3.0
+offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_p8pu2")
